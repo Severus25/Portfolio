@@ -108,13 +108,18 @@
     });
 
     /*--/ Star Typed /--*/
-    if ($('.text-slider').length == 1) {
-        var typed_strings = $('.text-slider-items').text();
-        var typed = new Typed('.text-slider', {
-            strings: typed_strings.split(','),
-            typeSpeed: 80, loop: true, backDelay: 1200, backSpeed: 35
-        });
-    }
+    $(document).ready(function () {
+        if ($('.text-slider').length == 1) {
+            var typed_strings = $('.text-slider-items').text();
+            var typed = new Typed('.text-slider', {
+                strings: typed_strings.split(','),
+                typeSpeed: 80,
+                loop: true,
+                backDelay: 1200,
+                backSpeed: 35,
+            });
+        }
+    });
 
     /*--/ Testimonials owl /--*/
     $('#testimonial-mf').owlCarousel({
